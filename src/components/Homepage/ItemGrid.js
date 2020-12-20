@@ -18,16 +18,20 @@ const ItemGrid = ({ filter }) => {
   console.log(`filter: ${filter}`);
 
   useEffect(() => {
-    fetch("/allitems")
+    fetch("https://ecommerce-299100.uc.r.appspot.com/allitems",{
+      mode:'cors'
+    })
       .then((res) => res.json())
       .then((data) => setItems([...data.data]))
       .catch((err) => console.log(err));
 
-    fetch("/companies")
+    fetch("https://ecommerce-299100.uc.r.appspot.com/companies", {
+      mode:'cors'
+    })
       .then((res) => res.json())
       .then((data) => {
         setSellers([...data.data]);
-        // console.log(data.data);
+        console.log(data.data);
       })
       .catch((err) => console.log(err));
   }, []);
