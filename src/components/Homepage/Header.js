@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     top: 25%;
     right: 20px;
     cursor: pointer;
-    color: #000;
+    color: #fff;
   }
 `;
 

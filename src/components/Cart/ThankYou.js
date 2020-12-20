@@ -7,7 +7,7 @@ const ThankYou = () => {
 
         <Wrapper>
             <HomeLink ><NavLink to="/">Main</NavLink>/ Shopping Cart / Checkout</HomeLink>
-            <ThankYouTitle>Thank you for your purchase</ThankYouTitle>
+            <ThankYouTitle style={{color: '#fff'}}>Thank you for your purchase</ThankYouTitle>
 
             <StyledNavLink to="/"  ><Button>Continue Shopping</Button></StyledNavLink> 
 
@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-
+    
 
 
 `
@@ -32,6 +32,7 @@ const ThankYouTitle = styled.p`
     padding-top: 20%;
     font-size: 50px;
     margin: 0 auto;
+    color: #fff;
 `
 
 const StyledNavLink = styled(NavLink)`

@@ -5,19 +5,19 @@ const Sidebar = () => {
     <Wrapper>
       <Category>
         <h4>Category</h4>
-        <label>
+        <label style={{color : "#fff"}}>
           <input type="checkbox" />
           Entertainment
         </label>
-        <label>
+        <label  style={{color : "#fff"}}>
           <input type="checkbox" />
           Fitness
         </label>
-        <label>
+        <label  style={{color : "#fff"}}>
           <input type="checkbox" />
           Lifestyle
         </label>
-        <label>
+        <label  style={{color : "#fff"}}>
           <input type="checkbox" />
           Medical
         </label>
@@ -53,6 +53,13 @@ const Wrapper = styled.div`
 const Category = styled.div`
   display: flex;
   flex-direction: column;
+  color: #fff;
+
+
+`;
+
+const LabelCat = styled.label`
+  color: #fff !important;
 `;
 
 const PriceCat = styled.div`
