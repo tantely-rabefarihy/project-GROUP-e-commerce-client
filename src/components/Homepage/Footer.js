@@ -64,6 +64,7 @@ const CompanyInfoContainer = styled.div`
   list-style: none;
   li {
     padding: 7px;
+    color:#fff;
   }
   li:hover {
     cursor: default;
@@ -74,6 +75,7 @@ const InfoContainer = styled.div`
   list-style: none;
   li {
     padding: 7px;
+    color:#fff;
   }
   li:hover {
     cursor: pointer;

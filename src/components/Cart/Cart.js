@@ -32,7 +32,9 @@ const Cart = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        window.location = "http://localhost:3000/thankyou";
+        // window.location = "https://determined-bose-30a67b.netlify.app/thankyou";
+
+
       });
   };
 
@@ -80,13 +82,17 @@ const Cart = () => {
           Total: <span>${grandTotal}</span>
         </div>
         {/* <NavLink to="/thankyou"> */}
-        <button
-          onClick={(e) => {
-            updateInventory();
-          }}
-        >
-          Purchase
-        </button>
+
+        <NavLink to="/thankyou">
+          <button
+            onClick={(e) => {
+              updateInventory();
+            }}
+          >
+            Purchase
+          </button>
+        </NavLink>
+
         {/* </NavLink> */}
       </div>
     </Wrapper>
@@ -152,6 +158,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
+  color: #fff;
 
   .homeLink {
     color: gray;

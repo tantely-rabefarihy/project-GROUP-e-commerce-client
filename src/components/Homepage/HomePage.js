@@ -121,5 +121,6 @@ const Category = styled.div`
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
+  color: #fff;
 `;
 export default HomePage;
