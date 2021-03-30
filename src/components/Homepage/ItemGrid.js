@@ -18,15 +18,15 @@ const ItemGrid = ({ filter }) => {
   console.log(`filter: ${filter}`);
 
   useEffect(() => {
-    fetch("https://ecommerce-299100.uc.r.appspot.com/allitems",{
-      mode:'cors'
+    fetch("https://ecommerce-299100.uc.r.appspot.com/allitems", {
+      mode: "cors",
     })
       .then((res) => res.json())
       .then((data) => setItems([...data.data]))
       .catch((err) => console.log(err));
 
     fetch("https://ecommerce-299100.uc.r.appspot.com/companies", {
-      mode:'cors'
+      mode: "cors",
     })
       .then((res) => res.json())
       .then((data) => {
@@ -58,20 +58,22 @@ const ItemGrid = ({ filter }) => {
 
   return (
     <Wrapper>
-      {items &&
-        sellers &&
-        currentTodos.map((item) => {
-          const company = sellers.find(
-            (seller) => seller._id === item.companyId
-          );
-          return (
-            <StoreItem
-              key={item.id}
-              item={{ ...item }}
-              company={{ ...company }}
-            />
-          );
-        })}
+      <GridContainer>
+        {items &&
+          sellers &&
+          currentTodos.map((item) => {
+            const company = sellers.find(
+              (seller) => seller._id === item.companyId
+            );
+            return (
+              <StoreItem
+                key={item.id}
+                item={{ ...item }}
+                company={{ ...company }}
+              />
+            );
+          })}
+      </GridContainer>
       <PaginationContainer>
         <Pagination
           className="pagination"
@@ -90,18 +92,23 @@ const ItemGrid = ({ filter }) => {
   );
 };
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-gap: 40px;
-  margin-right: 20px;
-  grid-template-areas:
-    "main main main main main"
-    "main main main main main"
-    "main main main main main"
-    " . footer . . . ";
-`;
+const Wrapper = styled.div``;
 
+const GridContainer = styled.div`
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));*/
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: 1fr;
+  /* grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr)); */
+  grid-gap: 1rem;
+  /* margin-right: 20px; */
+  /* grid-template-areas:
+    "main main main main "
+    "main main main main "
+    "main main main main "
+    " . footer . . "; */
+`;
 const PaginationContainer = styled.footer`
   grid-area: footer;
   display: grid;

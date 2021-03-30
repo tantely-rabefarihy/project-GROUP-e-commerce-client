@@ -99,28 +99,31 @@ const HomePage = () => {
 };
 
 const Wrapper = styled.div`
-  display: grid;
+  width: 100vw;
+  /* display: grid;
   grid-template-areas:
     "header header header header header header "
     "sidebar  main main main main main"
     "footer footer footer footer footer footer";
-  grid-template-columns: 300px auto;
+  grid-template-columns: 300px auto; */
   height: 100vh;
 `;
 
 const ItemGridWrapper = styled.main`
-  grid-area: main;
+  /* grid-area: main; */
   padding: 16px 20px;
 `;
 
 const FooterWrapper = styled.footer`
-  grid-area: footer;
+  /* grid-area: footer; */
   padding: 16px 20px;
 `;
 const Category = styled.div`
-  grid-area: sidebar;
+  padding: 1rem;
+  /* grid-area: sidebar; */
+  justify-content: space-evenly;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: #fff;
 `;
 export default HomePage;

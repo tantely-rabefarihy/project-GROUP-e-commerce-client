@@ -55,11 +55,12 @@ const Wrapper = styled.div`
   grid-area: header;
   width: auto;
   margin: 0;
+  position: relative;
 
   .icon {
     position: absolute;
-    top: 25%;
-    right: 20px;
+    top: 1.5rem;
+    right: 2rem;
     cursor: pointer;
     color: #fff;
   }
@@ -71,7 +72,6 @@ const Top = styled.div`
   display: flex;
   width: 100vw;
   height: 6em;
-  position: relative;
 `;
 
 const Banner = styled.img`
@@ -94,8 +94,8 @@ const ItemCount = styled.div`
   border-radius: 50%;
   text-decoration: none;
   position: absolute;
-  right: 5px;
-  top: 10px;
+  right: 1rem;
+  top: 1rem;
   background-color: black;
   z-index: 1;
   margin-right: 5px;
