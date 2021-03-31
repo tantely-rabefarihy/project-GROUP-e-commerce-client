@@ -11,11 +11,11 @@ const Footer = () => {
     <Wrapper>
       <div>
         <CompanyInfoContainer>
-          <CompanyTitle>Gucci Mane</CompanyTitle>
-          <li>support@guccimane.com</li>
+          <CompanyTitle>Gucchi Mane</CompanyTitle>
+          <li>support@gucchimane.com</li>
           <li>Call us on</li>
           <li>+1 844 420 6969</li>
-          <li>7AM - 4PM, CET Mon - Fri</li>
+          <li>7AM - 4PM, EST Mon - Fri</li>
           <Icons>
             <li>
               <Icon size={20} icon={facebook} />
@@ -43,7 +43,7 @@ const Footer = () => {
       </div>
       <div>
         <InfoContainer>
-          <Title>#GUCCIMANE</Title>
+          <Title>#GUCCHIMANE</Title>
           <li>Our Blog</li>
           <li>Contact</li>
           <li>Our Story</li>
@@ -64,7 +64,7 @@ const CompanyInfoContainer = styled.div`
   list-style: none;
   li {
     padding: 7px;
-    color:#fff;
+    color: #fff;
   }
   li:hover {
     cursor: default;
@@ -75,20 +75,21 @@ const InfoContainer = styled.div`
   list-style: none;
   li {
     padding: 7px;
-    color:#fff;
+    color: #fff;
   }
   li:hover {
     cursor: pointer;
-    color: red;
+    color: #f8be06;
   }
 `;
 
-const CompanyTitle = styled.div`
+const CompanyTitle = styled.h2`
+  margin: 0;
+  font-family: "Poppins", sans-serif;
   list-style: none;
-  padding: 10px;
   font-size: 40px;
   font-weight: 700;
-  color: red;
+  color: #f8be06;
   :hover {
     cursor: default;
   }
@@ -97,9 +98,9 @@ const CompanyTitle = styled.div`
 const Title = styled.div`
   list-style: none;
   padding: 10px;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 700;
-  color: red;
+  color: #f8be06;
   :hover {
     cursor: default;
   }
@@ -112,7 +113,7 @@ const Icons = styled.div`
   width: 200px;
   li :hover {
     cursor: pointer;
-    color: red;
+    color: #f8be06;
   }
 `;
 

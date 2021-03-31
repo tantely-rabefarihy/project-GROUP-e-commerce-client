@@ -46,47 +46,49 @@ const HomePage = () => {
     <Wrapper>
       <Header />
       <Category>
-        Category:
-        <label>
-          <input
-            type="checkbox"
-            name="category"
-            value="Entertainment"
-            onChange={(e) => handleFilter(e, entCheched, setEntChecked)}
-            checked={entCheched}
-          />
-          Entertainment
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="category"
-            value="Fitness"
-            onChange={(e) => handleFilter(e, fitCheched, setFitChecked)}
-            checked={fitCheched}
-          />
-          Fitness
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="category"
-            value="Lifestyle"
-            onChange={(e) => handleFilter(e, lifeCheched, setLifeChecked)}
-            checked={lifeCheched}
-          />
-          Lifestyle
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="category"
-            value="Medical"
-            onChange={(e) => handleFilter(e, medCheched, setMedChecked)}
-            checked={medCheched}
-          />
-          Medical
-        </label>
+        <span>Filter:</span>
+        <Filters>
+          <label>
+            <input
+              type="checkbox"
+              name="category"
+              value="Entertainment"
+              onChange={(e) => handleFilter(e, entCheched, setEntChecked)}
+              checked={entCheched}
+            />
+            Entertainment
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="category"
+              value="Fitness"
+              onChange={(e) => handleFilter(e, fitCheched, setFitChecked)}
+              checked={fitCheched}
+            />
+            Fitness
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="category"
+              value="Lifestyle"
+              onChange={(e) => handleFilter(e, lifeCheched, setLifeChecked)}
+              checked={lifeCheched}
+            />
+            Lifestyle
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="category"
+              value="Medical"
+              onChange={(e) => handleFilter(e, medCheched, setMedChecked)}
+              checked={medCheched}
+            />
+            Medical
+          </label>
+        </Filters>
       </Category>
       <ItemGridWrapper>
         <ItemGrid filter={filter} />
@@ -100,30 +102,33 @@ const HomePage = () => {
 
 const Wrapper = styled.div`
   width: 100vw;
-  /* display: grid;
-  grid-template-areas:
-    "header header header header header header "
-    "sidebar  main main main main main"
-    "footer footer footer footer footer footer";
-  grid-template-columns: 300px auto; */
   height: 100vh;
 `;
 
 const ItemGridWrapper = styled.main`
-  /* grid-area: main; */
   padding: 16px 20px;
 `;
 
 const FooterWrapper = styled.footer`
-  /* grid-area: footer; */
   padding: 16px 20px;
 `;
 const Category = styled.div`
   padding: 1rem;
-  /* grid-area: sidebar; */
-  justify-content: space-evenly;
   display: flex;
   flex-direction: row;
   color: #fff;
+  align-items: center;
+`;
+
+const Filters = styled.div`
+  margin-left: 1rem;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
 `;
 export default HomePage;

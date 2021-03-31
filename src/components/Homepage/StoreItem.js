@@ -69,7 +69,6 @@ const Wrapper = styled.article`
     3px 41.8px 33.4px rgba(0, 0, 0, 0.028), 3px 100px 80px rgba(0, 0, 0, 0.02);
   border-radius: 16px;
   text-align: center;
-  /* height: fit-content; */
   display: flex;
   flex-direction: column;
 `;
@@ -82,7 +81,6 @@ const ItemContent = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  /* overflow; */
   border-radius: 12px;
   border: 3px solid rgba(0, 0, 0, 0.1);
   padding: 2px;

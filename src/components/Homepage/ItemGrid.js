@@ -78,7 +78,7 @@ const ItemGrid = ({ filter }) => {
         <Pagination
           className="pagination"
           activePage={activePage}
-          itemsCountPerPage={15}
+          itemsCountPerPage={16}
           totalItemsCount={filteredList.length}
           pageRangeDisplayed={5}
           onChange={handlePageChange}
@@ -97,17 +97,9 @@ const Wrapper = styled.div``;
 const GridContainer = styled.div`
   width: 100%;
   display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));*/
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-template-rows: 1fr;
-  /* grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr)); */
+  grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
   grid-gap: 1rem;
-  /* margin-right: 20px; */
-  /* grid-template-areas:
-    "main main main main "
-    "main main main main "
-    "main main main main "
-    " . footer . . "; */
 `;
 const PaginationContainer = styled.footer`
   grid-area: footer;
@@ -136,11 +128,11 @@ const PaginationContainer = styled.footer`
   }
 
   .pagination a.undefined {
-    color: red;
+    color: #f8be06;
   }
 
   .pagination li.active {
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid #f8be06;
     background-color: rgb(213, 213, 195, 0.2);
     border-radius: 5px;
   }

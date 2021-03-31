@@ -25,13 +25,8 @@ const Header = () => {
     <Wrapper>
       <Top>
         <Title>
-          <div style={{ color: "red" }}>
-            <Icon icon={ic_attach_money} size={40} />
-          </div>
-          Gucci Mane
-          <div>
-            <Icon icon={ic_attach_money} size={40} />
-          </div>
+          <div style={{ color: "red" }}></div>
+          Gucchi
         </Title>
         <div>
           <NavLink to="/cart">
@@ -46,7 +41,7 @@ const Header = () => {
           </NavLink>
         </div>
       </Top>
-      <Banner alt="store-banner" src={bannerImg} />
+      <BannerSec></BannerSec>
     </Wrapper>
   );
 };
@@ -74,15 +69,18 @@ const Top = styled.div`
   height: 6em;
 `;
 
-const Banner = styled.img`
-  width: 100vw;
-  height: 400px;
+const BannerSec = styled.section`
+  background: url(${bannerImg}) center;
+  background-size: cover;
+  padding: 8rem 2rem;
 `;
 
 const Title = styled.h1`
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
   display: flex;
-  color: red;
+  color: #f4f4f4;
 `;
 
 const ItemCount = styled.div`
