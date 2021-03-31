@@ -14,19 +14,19 @@ const HomePage = () => {
     "Lifestyle",
   ];
   const [filter, setFilter] = useState([...defaultFilterState]);
-  const [entCheched, setEntChecked] = useState(false);
-  const [fitCheched, setFitChecked] = useState(false);
-  const [medCheched, setMedChecked] = useState(false);
-  const [lifeCheched, setLifeChecked] = useState(false);
+  const [entChecked, setEntChecked] = useState(false);
+  const [fitChecked, setFitChecked] = useState(false);
+  const [medChecked, setMedChecked] = useState(false);
+  const [lifeChecked, setLifeChecked] = useState(false);
   const [filter2, setFilter2] = useState([]);
 
   React.useEffect(() => {
-    const checkedArray = [entCheched, fitCheched, lifeCheched, medCheched];
+    const checkedArray = [entChecked, fitChecked, lifeChecked, medChecked];
 
     checkedArray.every((box) => box === false)
       ? setFilter([...defaultFilterState])
       : setFilter([...filter2]);
-  }, [entCheched, fitCheched, medCheched, lifeCheched]);
+  }, [entChecked, fitChecked, medChecked, lifeChecked]);
 
   const handleFilter = (e, catTarget, setCatTarget) => {
     const cat = e.target.value;
@@ -53,8 +53,8 @@ const HomePage = () => {
               type="checkbox"
               name="category"
               value="Entertainment"
-              onChange={(e) => handleFilter(e, entCheched, setEntChecked)}
-              checked={entCheched}
+              onChange={(e) => handleFilter(e, entChecked, setEntChecked)}
+              checked={entChecked}
             />
             Entertainment
           </label>
@@ -63,8 +63,8 @@ const HomePage = () => {
               type="checkbox"
               name="category"
               value="Fitness"
-              onChange={(e) => handleFilter(e, fitCheched, setFitChecked)}
-              checked={fitCheched}
+              onChange={(e) => handleFilter(e, fitChecked, setFitChecked)}
+              checked={fitChecked}
             />
             Fitness
           </label>
@@ -73,8 +73,8 @@ const HomePage = () => {
               type="checkbox"
               name="category"
               value="Lifestyle"
-              onChange={(e) => handleFilter(e, lifeCheched, setLifeChecked)}
-              checked={lifeCheched}
+              onChange={(e) => handleFilter(e, lifeChecked, setLifeChecked)}
+              checked={lifeChecked}
             />
             Lifestyle
           </label>
@@ -83,8 +83,8 @@ const HomePage = () => {
               type="checkbox"
               name="category"
               value="Medical"
-              onChange={(e) => handleFilter(e, medCheched, setMedChecked)}
-              checked={medCheched}
+              onChange={(e) => handleFilter(e, medChecked, setMedChecked)}
+              checked={medChecked}
             />
             Medical
           </label>
@@ -101,16 +101,16 @@ const HomePage = () => {
 };
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  height: 100%;
 `;
 
 const ItemGridWrapper = styled.main`
-  padding: 16px 20px;
+  padding: 1rem 1.2rem;
 `;
 
 const FooterWrapper = styled.footer`
-  padding: 16px 20px;
+  padding: 1rem 1.2rem;
 `;
 const Category = styled.div`
   padding: 1rem;
@@ -130,5 +130,10 @@ const Filters = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 1.2rem;
+
+  @media only screen and (max-width: 568px) {
+    width: max-content;
+    font-size: 0.8rem;
+  }
 `;
 export default HomePage;

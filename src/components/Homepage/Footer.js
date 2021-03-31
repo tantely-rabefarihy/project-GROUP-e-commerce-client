@@ -55,15 +55,19 @@ const Footer = () => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media only screen and (max-width: 568px) {
+    flex-direction: column;
+  }
 `;
 
 const CompanyInfoContainer = styled.div`
   list-style: none;
   li {
-    padding: 7px;
+    padding: 0.5rem;
     color: #fff;
   }
   li:hover {
@@ -74,7 +78,7 @@ const CompanyInfoContainer = styled.div`
 const InfoContainer = styled.div`
   list-style: none;
   li {
-    padding: 7px;
+    padding: 0.5rem;
     color: #fff;
   }
   li:hover {

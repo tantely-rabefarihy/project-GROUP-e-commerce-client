@@ -136,7 +136,7 @@ const Add = styled.button`
     opacity: 0.5;
   }
   :hover {
-    color: red;
+    color: #f8be06;
   }
 `;
 

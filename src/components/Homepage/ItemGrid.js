@@ -102,16 +102,13 @@ const GridContainer = styled.div`
   grid-gap: 1rem;
 `;
 const PaginationContainer = styled.footer`
-  grid-area: footer;
-  display: grid;
-  align-self: end;
+  display: flex;
+  flex-direction: row;
 
-  .pagination {
-    display: flex;
-    justify-self: center;
-  }
-
-  .pagiantion ul {
+  ul {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 0;
   }
 
   .pagination a {
@@ -123,7 +120,7 @@ const PaginationContainer = styled.footer`
   .pagination li {
     color: white;
     float: left;
-    padding: 8px 16px;
+    padding: 0.5rem;
     list-style-type: none;
   }
 

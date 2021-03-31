@@ -24,10 +24,7 @@ const Header = () => {
   return (
     <Wrapper>
       <Top>
-        <Title>
-          <div style={{ color: "red" }}></div>
-          Gucchi
-        </Title>
+        <Title>Gucchi</Title>
         <div>
           <NavLink to="/cart">
             {numInCart ? (
@@ -47,7 +44,6 @@ const Header = () => {
 };
 
 const Wrapper = styled.div`
-  grid-area: header;
   width: auto;
   margin: 0;
   position: relative;
@@ -55,7 +51,7 @@ const Wrapper = styled.div`
   .icon {
     position: absolute;
     top: 1.5rem;
-    right: 2rem;
+    right: 1rem;
     cursor: pointer;
     color: #fff;
   }
@@ -67,6 +63,9 @@ const Top = styled.div`
   display: flex;
   width: 100vw;
   height: 6em;
+  @media only screen and (max-width: 568px) {
+    justify-content: left;
+  }
 `;
 
 const BannerSec = styled.section`
@@ -81,18 +80,21 @@ const Title = styled.h1`
   font-size: 4rem;
   display: flex;
   color: #f4f4f4;
+  @media only screen and (max-width: 568px) {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
 `;
 
 const ItemCount = styled.div`
-  border: 2px solid white;
-  padding: 8px;
-  width: 30px;
-  height: 30px;
-  font-size: 12px;
+  border: 1px solid white;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 0.8em;
   border-radius: 50%;
   text-decoration: none;
   position: absolute;
-  right: 1rem;
+  right: 0.5rem;
   top: 1rem;
   background-color: black;
   z-index: 1;
