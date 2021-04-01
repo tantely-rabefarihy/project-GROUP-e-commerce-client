@@ -4,7 +4,6 @@ import bannerImg from "../../assets/banner-watch.jpg";
 import { Icon } from "react-icons-kit";
 import { ic_shopping_cart } from "react-icons-kit/md/ic_shopping_cart";
 import { NavLink } from "react-router-dom";
-import { ic_attach_money } from "react-icons-kit/md/ic_attach_money";
 import { useSelector } from "react-redux";
 import { getStoreItemArray } from "../../reducers";
 
@@ -87,6 +86,7 @@ const Title = styled.h1`
 `;
 
 const ItemCount = styled.div`
+  color: #f4f4f4;
   border: 1px solid white;
   width: 1.2rem;
   height: 1.2rem;
