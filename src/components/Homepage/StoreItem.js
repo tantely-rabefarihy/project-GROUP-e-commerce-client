@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { addItem } from "../../actions";
 import { useDispatch } from "react-redux";
 
 const StoreItem = ({ item, company }) => {
-  const {
-    id,
-    name,
-    price,
-    bodyLocation,
-    category,
-    image,
-    numInStock,
-    companyId,
-  } = item;
+  const { id, name, price, category, image, numInStock } = item;
 
   const { _id: companyIdNum, name: companyName, url, country } = company;
 

@@ -1,21 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import StoreItem from "./StoreItem";
-
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import Pagination from "react-js-pagination";
 
-import { useDispatch } from "react-redux";
-import { addItem } from "../../actions";
-
 const ItemGrid = ({ filter }) => {
   const [items, setItems] = useState([]);
   const [sellers, setSellers] = useState([]);
   const [activePage, setCurrentPage] = useState(1);
-  console.log(`filter: ${filter}`);
+  // console.log(`filter: ${filter}`);
 
   useEffect(() => {
     fetch("https://ecommerce-299100.uc.r.appspot.com/allitems", {
@@ -31,7 +27,7 @@ const ItemGrid = ({ filter }) => {
       .then((res) => res.json())
       .then((data) => {
         setSellers([...data.data]);
-        console.log(data.data);
+        // console.log(data.data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -54,7 +50,7 @@ const ItemGrid = ({ filter }) => {
     console.log(`active page is ${pageNumber}`);
     setCurrentPage(pageNumber);
   };
-  console.log({ sellers });
+  // console.log({ sellers });
 
   return (
     <Wrapper>

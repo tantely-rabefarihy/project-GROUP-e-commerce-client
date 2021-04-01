@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getStoreItemArray } from "../../reducers";
-import { useDispatch } from "react-redux";
-import { removeItem, changeCartQuantityItem } from "../../actions";
 import CartItem from "./CartItem";
 
 const Cart = () => {
@@ -171,15 +169,6 @@ const Wrapper = styled.div`
     align-self: center;
     padding-top: 4px;
     margin-left: 20px;
-  }
-  .buttonPrice {
-    height: 30px;
-    border: 1px solid white;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: none;
-    cursor: pointer;
-    width: fit-content;
   }
 
   .totalPurchase {

@@ -121,7 +121,7 @@ const Category = styled.div`
 `;
 
 const Filters = styled.div`
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   border: 1px solid white;
   padding: 1rem;
   border-radius: 8px;
@@ -134,6 +134,7 @@ const Filters = styled.div`
   @media only screen and (max-width: 568px) {
     width: max-content;
     font-size: 0.8rem;
+    padding: 1rem;
   }
 `;
 export default HomePage;
