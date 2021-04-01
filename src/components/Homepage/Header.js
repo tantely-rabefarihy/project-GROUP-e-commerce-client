@@ -43,7 +43,7 @@ const Header = () => {
 };
 
 const Wrapper = styled.div`
-  width: auto;
+  width: 100vw;
   margin: 0;
   position: relative;
 
