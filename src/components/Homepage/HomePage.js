@@ -131,9 +131,16 @@ const Filters = styled.div`
   flex-direction: row;
   font-size: 1.2rem;
 
+  input {
+    margin-right: 1rem;
+  }
+  label {
+    align-items: center;
+  }
+
   @media only screen and (max-width: 568px) {
     width: max-content;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 1rem;
   }
 `;
