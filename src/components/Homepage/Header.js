@@ -43,7 +43,6 @@ const Header = () => {
 };
 
 const Wrapper = styled.div`
-  width: 100vw;
   margin: 0;
   position: relative;
 
@@ -60,17 +59,16 @@ const Top = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  width: 100vw;
   height: 6em;
   @media only screen and (max-width: 568px) {
     justify-content: left;
   }
 `;
 
-const BannerSec = styled.section`
+const BannerSec = styled.div`
   background: url(${bannerImg}) center;
   background-size: cover;
-  padding: 8rem 2rem;
+  height: 10rem;
 `;
 
 const Title = styled.h1`
